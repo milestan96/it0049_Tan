@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav class="nav" aria-label="Main navigation">
-            <a class="brand" href="/">Basic POS</a>
+            <a class="brand" href="/"><span class="brand-mark">M</span> Miles POS</a>
             <div class="nav-links">
                 <a href="/">Home</a>
                 <a href="/about">About</a>
@@ -23,8 +23,11 @@
         <?= $this->renderSection('content') ?>
     </main>
 
-    <footer>
-        <p>&copy; <?= date('Y') ?> Miles Tan &mdash; Basic POS</p>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p>&copy; <?= date('Y') ?> Miles Tan</p>
+            <p>Simple tools for a clearer counter.</p>
+        </div>
     </footer>
 </body>
 </html>

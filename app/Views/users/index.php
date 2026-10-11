@@ -2,11 +2,16 @@
 
 <?= $this->section('content') ?>
 <section>
-    <p class="eyebrow">Records</p>
-    <h1>User Accounts</h1>
-    <p class="intro">Staff records currently stored in a temporary PHP array.</p>
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">Directory / 02</p>
+            <h1>Team</h1>
+            <p class="intro">Staff accounts currently stored in the workspace.</p>
+        </div>
+        <span class="count"><?= count($users) ?> records</span>
+    </div>
 
-    <div class="table-wrapper">
+    <div class="table-card table-wrapper">
         <table>
             <thead>
                 <tr>
