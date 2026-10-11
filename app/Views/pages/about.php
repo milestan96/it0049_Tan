@@ -4,7 +4,7 @@
 <section class="panel">
     <p class="eyebrow">The workspace</p>
     <h1>Small system. Clear purpose.</h1>
-    <p>Miles POS is an introductory CodeIgniter 4 project for keeping customer and staff account information close at hand.</p>
+    <p>Miles POS is an introductory CodeIgniter 4 project for keeping customer and staff account information close at hand, now backed by a real MySQL database.</p>
     <div class="info-grid">
         <article class="info-card">
             <h2>Built to learn</h2>

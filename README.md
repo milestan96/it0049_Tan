@@ -29,6 +29,27 @@ to your `app` folder. The affected files can be copied or merged from
 Copy `env` to `.env` and tailor for your app, specifically the baseURL
 and any database settings.
 
+### Database setup
+
+TFA2 replaces the temporary controller arrays with a MySQL database. Create the database and sample records by importing [`database/pos_db.sql`](database/pos_db.sql):
+
+```bash
+mysql -u root -p < database/pos_db.sql
+```
+
+Then copy `env` to `.env` and set these values for your local MySQL installation:
+
+```ini
+database.default.hostname = localhost
+database.default.database = pos_db
+database.default.username = root
+database.default.password = your_password
+database.default.DBDriver = MySQLi
+database.default.port = 3306
+```
+
+The Customer Accounts and User Accounts pages retrieve records through `CustomerModel` and `UserModel` using CodeIgniter Query Builder.
+
 ## Important Change with index.php
 
 `index.php` is no longer in the root of the project! It has been moved inside the *public* folder,

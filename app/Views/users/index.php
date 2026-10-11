@@ -17,7 +17,7 @@
                 <tr>
                     <th>Username</th>
                     <th>Full name</th>
-                    <th>Role</th>
+                    <th>Joined</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,7 +25,7 @@
                     <tr>
                         <td><?= esc($user['username']) ?></td>
                         <td><?= esc($user['full_name']) ?></td>
-                        <td><span class="role"><?= esc($user['role']) ?></span></td>
+                        <td><?= esc(date('M j, Y', strtotime($user['created_at']))) ?></td>
                     </tr>
                 <?php endforeach ?>
             </tbody>
