@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+vendor
+tests
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+php_errors.log
+modules.txt
+spark_output.txt
+phpunit.xml
+results
