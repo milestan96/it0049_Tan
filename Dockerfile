@@ -25,3 +25,5 @@ RUN composer install --no-dev --prefer-dist --no-interaction --no-progress --opt
 EXPOSE 10000
 
 CMD ["apache2-foreground"]
+
+
