@@ -194,6 +194,52 @@ class Database extends Config
     {
         parent::__construct();
 
+        // Read the connection values from Render/XAMPP environment variables.
+        // The fallbacks keep local development working when no variables exist.
+        $this->default['hostname'] = env(
+            'DB_HOST',
+            env('database_default_hostname', env('database.default.hostname', 'localhost'))
+        );
+        $this->default['port'] = (int) env(
+            'DB_PORT',
+            env('database_default_port', env('database.default.port', 3306))
+        );
+        $this->default['database'] = env(
+            'DB_NAME',
+            env('database_default_database', env('database.default.database', ''))
+        );
+        $this->default['username'] = env(
+            'DB_USER',
+            env('database_default_username', env('database.default.username', ''))
+        );
+        $this->default['password'] = env(
+            'DB_PASSWORD',
+            env('database_default_password', env('database.default.password', ''))
+        );
+
+        $sslVerify = env('DB_SSL_VERIFY', null);
+        $sslCaPath = env('DB_SSL_CA_PATH', '');
+        $encrypt = env('DB_ENCRYPT', env('database_default_encrypt', ''));
+
+        if ($sslCaPath !== '') {
+            $this->default['encrypt'] = [
+                'ssl_ca'     => $sslCaPath,
+                'ssl_verify' => $sslVerify === null
+                    ? true
+                    : filter_var($sslVerify, FILTER_VALIDATE_BOOLEAN),
+            ];
+        } elseif ($encrypt !== '') {
+            $decodedEncrypt = is_string($encrypt) ? json_decode($encrypt, true) : $encrypt;
+
+            if (is_array($decodedEncrypt)) {
+                $this->default['encrypt'] = $decodedEncrypt;
+            }
+        } elseif ($sslVerify !== null && $sslVerify !== '') {
+            $this->default['encrypt'] = [
+                'ssl_verify' => filter_var($sslVerify, FILTER_VALIDATE_BOOLEAN),
+            ];
+        }
+
         // Ensure that we always set the database group to 'tests' if
         // we are currently running an automated test suite, so that
         // we don't overwrite live data on accident.
