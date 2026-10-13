@@ -33,21 +33,21 @@ CREATE TABLE users (
 );
 
 INSERT INTO customers (full_name, email, phone, created_at) VALUES
-    ('Ana Reyes', 'ana.reyes@example.com', '0917-123-4501', '2026-01-10 09:00:00'),
-    ('Ben Santos', 'ben.santos@example.com', '0917-123-4502', '2026-01-11 09:00:00'),
-    ('Carla Mendoza', 'carla.mendoza@example.com', '0917-123-4503', '2026-01-12 09:00:00'),
-    ('Diego Cruz', 'diego.cruz@example.com', '0917-123-4504', '2026-01-13 09:00:00'),
-    ('Ella Garcia', 'ella.garcia@example.com', '0917-123-4505', '2026-01-14 09:00:00');
+    ('Nadia Natividad', 'nadia.natividad@example.com', '0917-638-2140', '2026-02-03 09:00:00'),
+    ('Marco Sis', 'marco.sis@example.com', '0917-742-5816', '2026-02-04 09:00:00'),
+    ('Vhong Navarro', 'vhong.navarro@example.com', '0917-315-9072', '2026-02-05 09:00:00'),
+    ('Jonas Mercado', 'jonas.mercado@example.com', '0917-864-2035', '2026-02-06 09:00:00'),
+    ('Tessa Valdezsissimo', 'tessa.valdezsissimo@example.com', '0917-529-7461', '2026-02-07 09:00:00');
 
 INSERT INTO users (username, full_name, email, created_at) VALUES
     ('miles.tan', 'Miles Tan', 'miles.tan@example.com', '2026-10-01 09:00:00');
 
 INSERT INTO tasks (title, status, task_date, created_at) VALUES
-    ('Review project requirements', 'completed', '2026-10-11', '2026-10-10 09:00:00'),
-    ('Plan the week', 'completed', '2026-10-12', '2026-10-10 09:15:00'),
-    ('Check database records', 'pending', '2026-10-13', '2026-10-12 08:00:00'),
-    ('Finish task list page', 'in-progress', '2026-10-13', '2026-10-12 08:15:00'),
-    ('Review responsive layout', 'pending', '2026-10-13', '2026-10-12 08:30:00'),
-    ('Write project documentation', 'pending', '2026-10-14', '2026-10-12 09:00:00'),
-    ('Prepare demo walkthrough', 'pending', '2026-10-14', '2026-10-12 09:15:00'),
-    ('Submit technical assessment', 'pending', '2026-10-15', '2026-10-12 09:30:00');
+    ('Wash the dishes', 'completed', '2026-10-11', '2026-10-10 09:00:00'),
+    ('Sweep the living room', 'completed', '2026-10-12', '2026-10-10 09:15:00'),
+    ('Fold the clean laundry', 'pending', '2026-10-13', '2026-10-12 08:00:00'),
+    ('Clean the kitchen counters', 'in-progress', '2026-10-13', '2026-10-12 08:15:00'),
+    ('Take out the trash', 'pending', '2026-10-13', '2026-10-12 08:30:00'),
+    ('Dust the bookshelves', 'pending', '2026-10-14', '2026-10-12 09:00:00'),
+    ('Water the house plants', 'pending', '2026-10-14', '2026-10-12 09:15:00'),
+    ('Organize the pantry', 'pending', '2026-10-15', '2026-10-12 09:30:00');
