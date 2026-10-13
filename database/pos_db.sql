@@ -6,6 +6,15 @@ USE pos_db;
 
 DROP TABLE IF EXISTS tasks;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS customers;
+
+CREATE TABLE customers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    created_at DATETIME NOT NULL
+);
 
 CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -22,6 +31,13 @@ CREATE TABLE users (
     email VARCHAR(100) NOT NULL,
     created_at DATETIME NOT NULL
 );
+
+INSERT INTO customers (full_name, email, phone, created_at) VALUES
+    ('Ana Reyes', 'ana.reyes@example.com', '0917-123-4501', '2026-01-10 09:00:00'),
+    ('Ben Santos', 'ben.santos@example.com', '0917-123-4502', '2026-01-11 09:00:00'),
+    ('Carla Mendoza', 'carla.mendoza@example.com', '0917-123-4503', '2026-01-12 09:00:00'),
+    ('Diego Cruz', 'diego.cruz@example.com', '0917-123-4504', '2026-01-13 09:00:00'),
+    ('Ella Garcia', 'ella.garcia@example.com', '0917-123-4505', '2026-01-14 09:00:00');
 
 INSERT INTO users (username, full_name, email, created_at) VALUES
     ('miles.tan', 'Miles Tan', 'miles.tan@example.com', '2026-10-01 09:00:00');

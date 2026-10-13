@@ -15,6 +15,8 @@
                 <a href="/tasks">Task List</a>
                 <a href="/profile">Profile</a>
                 <a href="/about">About</a>
+                <a href="/customers">Customers</a>
+                <a href="/users">Users</a>
             </div>
         </nav>
     </header>
