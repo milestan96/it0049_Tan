@@ -6,6 +6,8 @@ RUN apt-get update \
     && a2enmod rewrite \
     && rm -rf /var/lib/apt/lists/*
 
+RUN php -r "if (!extension_loaded('mysqli')) { exit(1); } echo 'mysqli is enabled';"
+
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
