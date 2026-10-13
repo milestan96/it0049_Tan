@@ -9,12 +9,12 @@
 <body>
     <header class="site-header">
         <nav class="nav" aria-label="Main navigation">
-            <a class="brand" href="/"><span class="brand-mark">M</span> Miles POS</a>
+            <a class="brand" href="/"><span class="brand-mark">T</span> Tasks for Today</a>
             <div class="nav-links">
-                <a href="/">Home</a>
+                <a href="/">Today</a>
+                <a href="/tasks">Task List</a>
+                <a href="/profile">Profile</a>
                 <a href="/about">About</a>
-                <a href="/customers">Customer Accounts</a>
-                <a href="/users">User Accounts</a>
             </div>
         </nav>
     </header>
@@ -26,7 +26,7 @@
     <footer class="site-footer">
         <div class="site-footer-inner">
             <p>&copy; <?= date('Y') ?> Miles Tan</p>
-            <p>Simple tools for a clearer counter.</p>
+            <p>A simple space for getting today done.</p>
         </div>
     </footer>
 </body>
